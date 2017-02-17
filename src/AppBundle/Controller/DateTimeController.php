@@ -7,11 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\HttpFoundation\Response;
 
-/**
- * Class DateTimeController
- *
- * @Route(service="app.datetime_controller")
- */
+/** @Route(service="app.datetime_controller") */
 class DateTimeController
 {
     private $templating;
@@ -23,9 +19,7 @@ class DateTimeController
         $this->dateProvider = $dateProvider;
     }
 
-    /**
-     * @Route(path="/datetime")
-     */
+    /** @Route(path="/datetime") */
     public function indexAction()
     {
         return new Response(
